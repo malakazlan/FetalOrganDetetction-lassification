@@ -1,0 +1,263 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #2d3436;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+}
+
+.header i {
+    color: #6c5ce7;
+    margin-right: 0.5rem;
+}
+
+.subtitle {
+    color: #636e72;
+    font-size: 1.1rem;
+}
+
+/* Upload Area Styles */
+.upload-area {
+    background: white;
+    border: 2px dashed #6c5ce7;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.upload-area:hover, .upload-area.highlight {
+    border-color: #a29bfe;
+    background: #f8f9ff;
+}
+
+.upload-area i {
+    font-size: 3rem;
+    color: #6c5ce7;
+    margin-bottom: 1rem;
+}
+
+.upload-area p {
+    color: #636e72;
+    margin-bottom: 1rem;
+}
+
+.file-input {
+    display: none;
+}
+
+.upload-btn {
+    background: #6c5ce7;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.upload-btn:hover {
+    background: #5f4dd0;
+}
+
+.file-name {
+    text-align: center;
+    color: #636e72;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+/* Button Styles */
+.btn {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background: #5f4dd0;
+}
+
+.btn.loading {
+    background: #a29bfe;
+    cursor: not-allowed;
+}
+
+.loader {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Result Styles */
+.result {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.result-header h2 {
+    color: #2d3436;
+    font-size: 1.8rem;
+}
+
+.result-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.prediction-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.prediction-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f8f9ff;
+    border-radius: 8px;
+}
+
+.prediction-item i {
+    font-size: 1.5rem;
+    color: #6c5ce7;
+}
+
+.prediction-item h3 {
+    font-size: 1rem;
+    color: #636e72;
+    margin-bottom: 0.5rem;
+}
+
+.prediction-value, .confidence-value {
+    font-size: 1.2rem;
+    color: #2d3436;
+    font-weight: 500;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploaded-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Error Styles */
+.error-container {
+    background: #ffe3e3;
+    border-left: 4px solid #ff6b6b;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 4px;
+}
+
+.error-container i {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+}
+
+.error {
+    color: #d63031;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .result-content {
+        grid-template-columns: 1fr;
+    }
+
+    .prediction-item {
+        padding: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result {
+    animation: fadeIn 0.5s ease-out;
+}
