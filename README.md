@@ -23,7 +23,26 @@ We have selected the following research papers as the foundation for our project
 
 ### Model Architecture
 
-The project utilizes a pre-trained deep learning model (stored in `.pkl` format) that has been specifically trained for fetal organ classification. The model architecture is based on transfer learning techniques, which allows for accurate classification even with limited training data. The model has been trained on a diverse dataset of fetal ultrasound images, ensuring robust performance across different imaging conditions and fetal positions.
+The project utilizes a Resnet deep learning model (stored in `.pkl` format) that has been specifically trained for fetal organ classification. The model architecture is based on transfer learning techniques, which allows for accurate classification even with limited training data. The model has been trained on a diverse dataset of fetal ultrasound images, ensuring robust performance across different imaging conditions and fetal positions.
+
+### Summary of the Research Papers: 
+The selected research papers explore the use of Convolutional Neural Networks (CNNs) for detecting 
+and segmenting fetal organs from ultrasound images. They highlight challenges such as variability in 
+imaging conditions (e.g., fetal position, maternal anatomy, device settings) and present methodologies 
+to overcome these issues. 
+Key Contributions: 
+## 1. Architecture Design: 
+The studies propose CNN architectures that balance complexity and accuracy using 
+convolutional layers, max pooling, and dropout techniques. 
+## 2. Preprocessing and Augmentation: 
+The research emphasizes preprocessing techniques (e.g., resizing, normalization) and 
+data augmentation (e.g., flipping, rotation) to increase model robustness. 
+## 3. Evaluation Metrics: 
+The papers utilize metrics such as accuracy, precision, recall, and F1-score to measure 
+the effectiveness of their models. 
+## 4. Results: 
+Achieving classification and segmentation accuracies above 90%, the models 
+demonstrate their utility for real-world medical imaging applications. 
 
 ## Features
 
@@ -43,7 +62,6 @@ The project utilizes a pre-trained deep learning model (stored in `.pkl` format)
 - Python
 - Flask
 - TensorFlow/Keras
-- HTML5/CSS3
 - JavaScript
 - Deep Learning (Transfer Learning)
 
